@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36705.20 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblio", "Biblio\Biblio.csproj", "{5091CB45-2658-4377-A6DE-CFF998992163}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Bilblio", "API_Bilblio\API_Bilblio.csproj", "{FCB172DD-DFD8-4220-8C55-E78BE55C640C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{5091CB45-2658-4377-A6DE-CFF998992163}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5091CB45-2658-4377-A6DE-CFF998992163}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5091CB45-2658-4377-A6DE-CFF998992163}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FCB172DD-DFD8-4220-8C55-E78BE55C640C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB172DD-DFD8-4220-8C55-E78BE55C640C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB172DD-DFD8-4220-8C55-E78BE55C640C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB172DD-DFD8-4220-8C55-E78BE55C640C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
