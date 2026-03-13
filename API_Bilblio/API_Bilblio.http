@@ -1,0 +1,6 @@
+@API_Bilblio_HostAddress = http://localhost:5034
+
+GET {{API_Bilblio_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
