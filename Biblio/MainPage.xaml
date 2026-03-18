@@ -8,7 +8,7 @@
              Title="Bibliothèque">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Ajouter">
+        <ToolbarItem Text="Ajouter" Clicked="Button_Clicked" x:Name="ajouter">
             <ToolbarItem.IconImageSource>
                 <FontImageSource FontFamily="MaterialIconsRegular" 
                         Glyph="&#xe88a;"
@@ -62,6 +62,7 @@
                             Grid.Row="1"
                             Text="{Binding Description}"
                             TextColor="Black"
+                            FontAttributes="Bold"
                             LineBreakMode="WordWrap"/>
 
                         <Label 
