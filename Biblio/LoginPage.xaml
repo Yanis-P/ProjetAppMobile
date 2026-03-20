@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblio.LoginPage"
+             Title="LoginPage">
+    
+    <VerticalStackLayout>
+        <Grid Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="paff.png" 
+                   Grid.Row="0" 
+                   MaximumHeightRequest="200" 
+                   MaximumWidthRequest="200"/>
+
+            <Label Text="Authentification"
+                   Padding="10"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+        </Grid>
+
+        <Frame BackgroundColor="Black" Padding="10">
+            <VerticalStackLayout Padding="10">
+                <Label x:Name="login"
+                        Text="Login"/>
+                <Entry TextColor="White"
+                       Placeholder="Saisir votre login"/>
+
+                <Label x:Name="password"
+                        Text="Password"/>
+                <Entry TextColor="White"
+                       Placeholder="Saisir votre mot de passe"
+                       IsPassword="True"/>
+
+                <Button Padding="10" 
+                        Text="Connexion"
+                        x:Name="loginButton"
+                        Clicked="loginButton_Clicked"/>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+
+</ContentPage>
