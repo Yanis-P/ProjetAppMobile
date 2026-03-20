@@ -3,15 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Biblio.MainPage"
              xmlns:local="clr-namespace:Biblio"
-             Shell.BackgroundColor="White"
-             Shell.TitleColor="Black"
+             Shell.BackgroundColor="DarkViolet"
+             Shell.TitleColor="White"
              Title="Bibliothèque">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Ajouter" Clicked="Button_Clicked" x:Name="ajouter">
+        <ToolbarItem Text="Ajouter" Clicked="Button_Clicked" x:Name="Déconnexion">
             <ToolbarItem.IconImageSource>
                 <FontImageSource FontFamily="MaterialIconsRegular" 
-                        Glyph="&#xe88a;"
+                        Glyph="&#xe853;"
                         Color="Black"/>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>

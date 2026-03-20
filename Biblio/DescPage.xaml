@@ -2,23 +2,62 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Biblio.DescPage"
-             Title="DescPage">
+             Title=" Se connecter"
+             Shell.BackgroundColor="DarkViolet"
+             Shell.TitleColor="White">
+       
+    
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        
+
+        <Grid Padding="10">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+           <!-- <Label Grid.Row="0" Grid.Column="0"
+                   Text="&#xe853;"
+                   FontFamily="MaterialIconsRegular"
+                   FontSize="100"
+                   TextColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" /> -->
+
+            <Image Grid.Row="0" Grid.Column="0"
+                   Source="paff.png"
+                   WidthRequest="100"
+                   HeightRequest="100"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+
+            <Label Grid.Row="0" Grid.Column="1"
+                   Text="Connexion"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   TextColor="White" />
+            
+            <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                   Margin="0,20,0,0"
+                   Padding="10"
+                   BackgroundColor="White"
+                   CornerRadius="10">
+                <VerticalStackLayout>
+                    <Entry x:Name="logIn" Placeholder="Nom d'utilisateur" TextColor="Black" />
+                    <Entry x:Name="mdp" Placeholder="Mot de passe" IsPassword="True" TextColor="Black" />
+                    <Button Clicked="LogIn" Text="Se connecter" BackgroundColor="DarkViolet" TextColor="White" Margin="0,20,0,0"/>
+                </VerticalStackLayout>
+             </Frame>
+
+        </Grid>
+
     </VerticalStackLayout>
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Ajouter" Clicked="Button_Clicked" x:Name="ajouter">
-            <ToolbarItem.IconImageSource>
-                <FontImageSource FontFamily="MaterialIconsRegular" 
-                        Glyph="&#xe88a;"
-                        Color="Black"/>
-            </ToolbarItem.IconImageSource>
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
-    
-    
 </ContentPage>
