@@ -4,10 +4,11 @@ namespace Biblio;
 
 public partial class LivrePage : ContentPage
 {
-	public LivrePage()
-	{
+    private Categorie maCategorie;
+    public LivrePage(Categorie categorie)
+    {
 		InitializeComponent();
-
+        maCategorie = categorie;
         loadDataFromAPI();
 
     }
@@ -23,6 +24,14 @@ public partial class LivrePage : ContentPage
             HttpResponseMessage response = await client.GetAsync(restURL);
             var content = await response.Content.ReadAsStringAsync();
             var Items = JsonConvert.DeserializeObject<List<Categorie>>(content);
+
+            Items = Items.Where(livre => livre.IdCat == maCategorie.IdCat).ToList();
+            if (Items.Count == 0)
+            {
+                await DisplayAlert("Alerte", "Pas de livres pour cette catégorie", "OK");
+                await Navigation.PopAsync();
+            }
+
             livres.ItemsSource = Items;
         }
         catch (Exception ex)
@@ -35,6 +44,6 @@ public partial class LivrePage : ContentPage
     {
         Livre l = (Livre)livres.SelectedItem;
 
-        await DisplayAlert("Alerte", "Nom: " + c.Name, "OK");
+        await DisplayAlert("Alerte", "Nom: " + l.Name, "OK");
     }
 }

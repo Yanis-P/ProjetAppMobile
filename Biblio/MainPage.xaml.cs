@@ -43,7 +43,13 @@ namespace Biblio
         {
             Categorie c = (Categorie)lv.SelectedItem;
 
-            await Navigation.PushAsync(new LivrePage());
+            BindingContext = lv.SelectedItem;
+            await Navigation.PushAsync(new LivrePage(c)
+            {
+                BindingContext = lv.SelectedItem
+            });
+
+
 
         }
     }
