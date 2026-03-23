@@ -1,9 +1,12 @@
 using Newtonsoft.Json;
+using System.Collections.ObjectModel;
 
 namespace Biblio
 {
     public partial class MainPage : ContentPage
     {
+
+
         public MainPage()
         {
             InitializeComponent();
@@ -36,5 +39,12 @@ namespace Biblio
             }
         }
 
+        async private void lv_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Categorie c = (Categorie)lv.SelectedItem;
+
+            await Navigation.PushAsync(new LivrePage());
+
+        }
     }
 }

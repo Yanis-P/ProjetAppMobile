@@ -17,16 +17,15 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
-    <ListView x:Name="lv"
-             SeparatorColor="White"
-             RowHeight="100"
-             BackgroundColor="White"
+    <CollectionView x:Name="lv"
+                    SelectionMode="Single"
+                    SelectionChanged="lv_SelectionChanged"
+                    BackgroundColor="White"
          >
-        <ListView.ItemTemplate>
+        <CollectionView.ItemTemplate>
             <DataTemplate>
-                <ViewCell>
 
-                    <Grid Padding="10">
+                <Grid Padding="10">
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
@@ -74,9 +73,8 @@
 
                     </Grid>
 
-                </ViewCell>
             </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 
 </ContentPage>
