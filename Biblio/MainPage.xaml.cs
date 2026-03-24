@@ -26,12 +26,22 @@ namespace Biblio
             try
             {
                 HttpClient client = new HttpClient();
-                var restURL = "http://localhost:5034/Categorie";
-                client.BaseAddress = new Uri(restURL);
-                HttpResponseMessage response = await client.GetAsync(restURL);
-                var content = await response.Content.ReadAsStringAsync();
-                var Items = JsonConvert.DeserializeObject<List<Categorie>>(content);
+                var restUrlCat = "http://localhost:5034/Categorie";
+                client.BaseAddress = new Uri(restUrlCat);
+                HttpResponseMessage response = await client.GetAsync(restUrlCat);
+                var contentCat = await response.Content.ReadAsStringAsync();
+                var Items = JsonConvert.DeserializeObject<List<Categorie>>(contentCat);
+
+              
+                /*var restUrlLivre = "http://localhost:5034/Livre";
+                client.BaseAddress = new Uri(restUrlLivre);
+                HttpResponseMessage responseLivre = await client.GetAsync(restUrlLivre);
+                var contentLivre = await responseLivre.Content.ReadAsStringAsync();
+                var ItemsLivre = JsonConvert.DeserializeObject<List<Livre>>(contentLivre);
+                */
                 lv.ItemsSource = Items;
+
+                //ItemsLivre = ItemsLivre.Count(livre).ToList();
             }
             catch (Exception ex)
             {

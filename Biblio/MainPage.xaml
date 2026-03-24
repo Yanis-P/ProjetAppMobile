@@ -17,15 +17,17 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
-    <CollectionView x:Name="lv"
+    <VerticalStackLayout>
+
+        <CollectionView x:Name="lv"
                     SelectionMode="Single"
                     SelectionChanged="lv_SelectionChanged"
                     BackgroundColor="White"
          >
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
 
-                <Grid Padding="10">
+                    <Grid Padding="10">
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
@@ -39,42 +41,43 @@
                         </Grid.ColumnDefinitions>
 
                         <Image 
-                            Grid.Column="0"
-                            Grid.Row="0"
-                            Grid.RowSpan="3"
-                            WidthRequest="60"  
-                            HeightRequest="60"
-                            Source="{Binding Image}"
-                            Margin="0,0,10,0"
-                            VerticalOptions="Center"/>
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Grid.RowSpan="3"
+                                WidthRequest="60"  
+                                HeightRequest="60"
+                                Source="{Binding Image}"
+                                Margin="0,0,10,0"
+                                VerticalOptions="Center"/>
 
                         <Label 
-                            Grid.Column="1"
-                            Grid.Row="0"
-                            Text="{Binding Name}"
-                            TextColor="Black"
-                            FontAttributes="Bold"
-                            LineBreakMode="TailTruncation"/>
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                Text="{Binding Name}"
+                                TextColor="Black"
+                                FontAttributes="Bold"
+                                LineBreakMode="TailTruncation"/>
 
                         <Label 
-                            Grid.Column="1"
-                            Grid.Row="1"
-                            Text="{Binding Description}"
-                            TextColor="Black"
-                            FontAttributes="Bold"
-                            LineBreakMode="WordWrap"/>
+                                Grid.Column="1"
+                                Grid.Row="1"
+                                Text="{Binding Description}"
+                                TextColor="Black"
+                                FontAttributes="Bold"
+                                LineBreakMode="WordWrap"/>
 
                         <Label 
-                            Grid.Column="1"
-                            Grid.Row="2"
-                            Text="{Binding Count}"
-                            TextColor="Black"
-                            FontAttributes="Bold"/>
+                                Grid.Column="1"
+                                Grid.Row="2"
+                                Text="{Binding Count}"
+                                TextColor="Black"
+                                FontAttributes="Bold"/>
 
                     </Grid>
 
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
 
 </ContentPage>

@@ -28,8 +28,11 @@ public partial class LivrePage : ContentPage
             Items = Items.Where(livre => livre.IdCat == maCategorie.IdCat).ToList();
             if (Items.Count == 0)
             {
-                await DisplayAlert("Alerte", "Pas de livres pour cette catégorie", "OK");
-                await Navigation.PopAsync();
+                Title = "Aucun livre trouvé pour cette catégorie.";
+            }
+            else
+            {
+                Title = maCategorie.Name;
             }
 
             livres.ItemsSource = Items;
